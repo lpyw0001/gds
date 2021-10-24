@@ -3510,3 +3510,42 @@ input, select, textarea {
 			}
 
 	}
+
+	 /* Adapted from https://codepen.io/matthewcain/pen/ZepbeR */
+	#button {
+		display: inline-block;
+		background-color: rgb(8, 58, 70);
+		width: 35px;
+		height: 35px;
+		text-align: center;
+		border-radius: 14px;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		transition: background-color .3s, 
+		  opacity .5s, visibility .5s;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 1000;
+	  }
+	  #button::after {
+		content: "\f077";
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 1em;
+		line-height: 20px;
+		color: #fff;
+	  }
+	  #button:hover {
+		cursor: pointer;
+		background-color: #333;
+	  }
+	  #button:active {
+		background-color: #555;
+	  }
+	  #button.show {
+		opacity: 0.5;
+		visibility: visible;
+	  }
+	  
